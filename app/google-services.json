@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "939848547590",
+    "project_id": "student-note-taker",
+    "storage_bucket": "student-note-taker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939848547590:android:65861f482ae003d1403287",
+        "android_client_info": {
+          "package_name": "com.coolcats.firebasenotetaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939848547590-9k8d8rvtravvldn3ijk0muclaer05vak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coolcats.firebasenotetaker",
+            "certificate_hash": "3eb89d1d98fab2170f2d1c4fe4b2235c53391f3f"
+          }
+        },
+        {
+          "client_id": "939848547590-pm1vbvc7e24hv3o6u93usb8c8atgdbm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT0ECDeAHNYDGLwr_VdjdRMnihaZTrMAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939848547590-pm1vbvc7e24hv3o6u93usb8c8atgdbm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
