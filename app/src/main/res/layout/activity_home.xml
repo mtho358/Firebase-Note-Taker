@@ -12,12 +12,27 @@
         android:layout_height="match_parent"
         android:elevation="10dp" />
 
+    <ImageButton
+        android:id="@+id/add_note_imageview"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:elevation="8dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_add" />
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notes_recyclerview"
+        android:id="@+id/note_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/notelist_item_layout"
+        android:layout_margin="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        tools:listitem="@layout/notelist_item_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

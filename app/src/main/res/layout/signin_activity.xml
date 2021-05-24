@@ -22,9 +22,10 @@
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="747dp" />
 
     <EditText
         android:id="@+id/password_edittext"

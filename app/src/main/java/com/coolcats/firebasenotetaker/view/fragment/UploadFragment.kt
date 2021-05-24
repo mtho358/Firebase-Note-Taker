@@ -1,4 +1,4 @@
-package com.coolcats.firebasenotetaker.view
+package com.coolcats.firebasenotetaker.view.fragment
 
 import android.content.Intent
 import android.os.Bundle

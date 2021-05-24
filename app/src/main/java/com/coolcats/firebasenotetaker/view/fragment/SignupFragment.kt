@@ -1,4 +1,4 @@
-package com.coolcats.firebasenotetaker.view
+package com.coolcats.firebasenotetaker.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.coolcats.firebasenotetaker.R
 import com.coolcats.firebasenotetaker.model.SignUpUser
+import com.coolcats.firebasenotetaker.view.SignInActivity
 import kotlinx.android.synthetic.main.signup_fragment_layout.*
 
 class SignupFragment(): Fragment(){

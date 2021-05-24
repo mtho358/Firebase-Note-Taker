@@ -7,17 +7,14 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.coolcats.firebasenotetaker.R
 import com.coolcats.firebasenotetaker.model.SignUpUser
+import com.coolcats.firebasenotetaker.view.fragment.SignupFragment
 import com.google.android.gms.tasks.Task
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.signin_activity.*
 
 class SignInActivity : AppCompatActivity(){
-
-    private val noteReference = FirebaseDatabase.getInstance().reference.child("Notes")
-    private val userReference = FirebaseDatabase.getInstance().reference.child("Users")
 
     private val signupFragment = SignupFragment()
 
