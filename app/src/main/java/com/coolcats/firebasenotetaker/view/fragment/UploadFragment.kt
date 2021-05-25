@@ -1,6 +1,5 @@
 package com.coolcats.firebasenotetaker.view.fragment
 
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,13 +9,9 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.coolcats.firebasenotetaker.R
-import com.coolcats.firebasenotetaker.model.NotePost
-import com.google.firebase.auth.FirebaseAuth
+import com.coolcats.firebasenotetaker.model.ClassNote
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.upload_fragment_layout.*
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.util.*
 
 class UploadFragment : Fragment() {
 
@@ -31,7 +26,7 @@ class UploadFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         upload_button.setOnClickListener {
-            if(note_title_edittext.text.isEmpty() || note_edittext.text.isEmpty()){
+            if(subject_edittext.text.isEmpty() || note_body_edittext.text.isEmpty()){
                 Toast.makeText(requireContext(), "Fields cannot be empty", Toast.LENGTH_LONG).show()
             }else{
                 uploadNote()
@@ -45,14 +40,17 @@ class UploadFragment : Fragment() {
         val key = reference.push().key ?: ""
 
 
-        val note = NotePost(
+        val note = ClassNote(
             "2021-05-24",
             key,
-            FirebaseAuth.getInstance().currentUser?.uid.toString(),
-            note_title_edittext.toString().trim(),
-            note_edittext.toString()
+            subject_edittext.text.toString().trim(),
+            note_body_edittext.text.toString().trim()
         )
         reference.child(key).setValue(note)
         Toast.makeText(requireContext(), "Success!!", Toast.LENGTH_SHORT).show()
+
+        val count = requireActivity().supportFragmentManager.backStackEntryCount
+        for(i in 0..count) requireActivity().supportFragmentManager.popBackStack()
     }
+
 }

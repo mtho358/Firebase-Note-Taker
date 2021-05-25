@@ -2,7 +2,6 @@ package com.coolcats.firebasenotetaker.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.coolcats.firebasenotetaker.model.NotePost
 import com.coolcats.firebasenotetaker.model.User
 import com.coolcats.firebasenotetaker.util.LoadingStatus
 

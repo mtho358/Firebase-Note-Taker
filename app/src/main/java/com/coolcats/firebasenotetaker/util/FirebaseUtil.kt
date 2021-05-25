@@ -6,7 +6,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class FirebaseUtil {
 
-    fun getNotesDatabase(): DatabaseReference = FirebaseDatabase.getInstance().reference.child("Notes")
+    fun getNotesDatabase(): DatabaseReference = FirebaseDatabase.getInstance().reference.child("NotePosts")
     fun getUsersDatabase(): DatabaseReference = FirebaseDatabase.getInstance().reference.child("Users")
 
 }

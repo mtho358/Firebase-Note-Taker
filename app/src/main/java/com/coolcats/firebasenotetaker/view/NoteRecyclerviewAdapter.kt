@@ -5,12 +5,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.coolcats.firebasenotetaker.R
-import com.coolcats.firebasenotetaker.model.NotePost
+import com.coolcats.firebasenotetaker.model.ClassNote
 import kotlinx.android.synthetic.main.notelist_item_layout.view.*
 
 class NoteRecyclerviewAdapter() : RecyclerView.Adapter<NoteRecyclerviewAdapter.NoteViewHolder>(){
 
-    var notes: List<NotePost> = mutableListOf()
+    var notes: List<ClassNote> = mutableListOf()
+    set(value) {
+        field = value
+        notifyDataSetChanged()
+    }
 
     inner class NoteViewHolder(itemView : View): RecyclerView.ViewHolder(itemView)
 
@@ -24,8 +28,9 @@ class NoteRecyclerviewAdapter() : RecyclerView.Adapter<NoteRecyclerviewAdapter.N
 
     //Binds the data to the corresponding elements within the recycler view list item
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
+        val notePost = notes[position]
         holder.itemView.apply {
-            note_title_textview.text = notes[position].title
+            note_title_textview.text = notePost.subject.trim()
         }
     }
 
