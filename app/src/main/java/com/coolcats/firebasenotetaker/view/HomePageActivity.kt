@@ -28,8 +28,6 @@ class HomePageActivity : AppCompatActivity() {
         note_recyclerview.adapter = adapter
         note_recyclerview.layoutManager = LinearLayoutManager(this)
 
-        Log.d("TAG_M", "Attempting to read from DB")
-
         FirebaseDatabase.getInstance().reference.child("NotePosts")
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -37,15 +35,8 @@ class HomePageActivity : AppCompatActivity() {
                     snapshot.children.forEach {
                         it.getValue(ClassNote::class.java)?.let { item->
                             notesList.add(item)
-                            Log.d("TAG_M", item.id)
-                            Log.d("TAG_M", item.date)
-                            Log.d("TAG_M", item.subject)
-                            Log.d("TAG_M", item.body)
                         }
                     }
-
-                    Log.d("TAG_M", "${notesList.size}")
-
                     adapter.notes = notesList
                 }
 
@@ -54,7 +45,7 @@ class HomePageActivity : AppCompatActivity() {
                 }
 
             })
-        Log.d("TAG_M", "Reading Complete")
+
         add_note_imageview.setOnClickListener{
             val fragment = UploadFragment()
 

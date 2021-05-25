@@ -41,7 +41,6 @@ class UploadFragment : Fragment() {
 
 
         val note = ClassNote(
-            "2021-05-24",
             key,
             subject_edittext.text.toString().trim(),
             note_body_edittext.text.toString().trim()

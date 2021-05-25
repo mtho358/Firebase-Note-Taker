@@ -31,6 +31,7 @@ class NoteRecyclerviewAdapter() : RecyclerView.Adapter<NoteRecyclerviewAdapter.N
         val notePost = notes[position]
         holder.itemView.apply {
             note_title_textview.text = notePost.subject.trim()
+            body_textview.text = notePost.body.trim()
         }
     }
 
